@@ -1,38 +1,101 @@
+/* App.css */
 .App {
+  font-family: Arial, sans-serif;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.home {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Gallery.css */
+.gallery {
+  padding: 20px;
+  text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.day-gallery {
+  margin-bottom: 40px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.day-gallery h3 {
+  margin-bottom: 10px;
+}
+
+.images {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+
+.image-container {
+  position: relative;
+  width: 48%;
+}
+
+.image-container img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.image-container p {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
   color: white;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+/* App.css */
+.navbar {
+  background-color: #393E46; /* Dark background for the navbar */
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.navbar nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar nav ul li {
+  margin: 0 1rem; /* Space out the navbar items */
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #EEEEEE; /* Light text for the links */
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.navbar nav ul li a:hover {
+  color: #00ADB5; /* Highlight link on hover */
 }
