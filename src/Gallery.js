@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 import './Gallery.css';
 
 const galleryImages = [
-  { day: 1, images: ['/assets/Day 1 Color.jpg', '/assets/day 1 Thirds.jpg'] },
+  { day: 1, images: ['/assets/Day 1 Color.jpg', '/assets/Day 1 Thirds.jpg'] },
   { day: 2, images: ['/assets/Day 2 Odds.jpg', '/assets/Day 2 Frame.jpg'] },
-  { day: 3, images: ['/assets/Day 1 Color.jpg', '/assets/day 1 Thirds.jpg'] },
+  { day: 3, images: ['/assets/Day 1 Color.jpg', '/assets/Day 1 Thirds.jpg'] },
   { day: 4, images: ['/assets/Day 2 Odds.jpg', '/assets/Day 2 Frame.jpg'] },
-  { day: 5, images: ['/assets/Day 1 Color.jpg', '/assets/day 1 Thirds.jpg'] },
+  { day: 5, images: ['/assets/Day 1 Color.jpg', '/assets/Day 1 Thirds.jpg'] },
 ];
 
 const Gallery = () => {
