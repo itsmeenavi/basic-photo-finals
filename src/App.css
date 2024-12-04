@@ -3,73 +3,6 @@
   font-family: Arial, sans-serif;
 }
 
-nav ul {
-  display: flex;
-  list-style-type: none;
-  padding: 0;
-}
-
-nav li {
-  margin-right: 20px;
-}
-
-nav a {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
-}
-
-.home {
-  text-align: center;
-}
-
-/* Gallery.css */
-.gallery {
-  padding: 20px;
-  text-align: center;
-}
-
-.day-gallery {
-  margin-bottom: 40px;
-}
-
-.day-gallery h3 {
-  margin-bottom: 10px;
-}
-
-.images {
-  display: flex;
-  justify-content: space-between;
-}
-
-.image-container {
-  position: relative;
-  width: 48%;
-}
-
-.image-container img {
-  width: 100%;
-  border-radius: 8px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.image-container img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-.image-container p {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  padding: 5px;
-  font-size: 14px;
-  border-radius: 5px;
-}
-
-/* App.css */
 .navbar {
   background-color: #393E46; /* Dark background for the navbar */
   padding: 1rem 2rem;
@@ -99,3 +32,12 @@ nav a {
 .navbar nav ul li a:hover {
   color: #00ADB5; /* Highlight link on hover */
 }
+
+/* Active link styling if using NavLink */
+.active {
+  color: #00ADB5;
+}
+
+/* Gallery.css remains unchanged */
+/* Members.css contains its own styles */
+/* Home.css now contains only image styles */

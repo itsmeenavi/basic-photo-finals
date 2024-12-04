@@ -4,9 +4,10 @@ import './Gallery.css';
 const galleryImages = [
   { day: 1, images: ['/assets/Day 1 Color.jpg', '/assets/Day 1 Thirds.jpg'] },
   { day: 2, images: ['/assets/Day 2 Odds.jpg', '/assets/Day 2 Frame.jpg'] },
-  { day: 3, images: ['/assets/Day 1 Color.jpg', '/assets/Day 1 Thirds.jpg'] },
-  { day: 4, images: ['/assets/Day 2 Odds.jpg', '/assets/Day 2 Frame.jpg'] },
-  { day: 5, images: ['/assets/Day 1 Color.jpg', '/assets/Day 1 Thirds.jpg'] },
+  { day: 3, images: ['/assets/Day 3 Fill the frame.jpg', '/assets/Day 3 Pattern.jpg'] },
+  { day: 4, images: ['/assets/Day 4.jpg', '/assets/Day 4 direct.jpg'] },
+  { day: 5, images: ['/assets/Day 5 pasko.jpg', '/assets/Day 5 Symmetry.jpg'] },
+  { day: 6, images: ['/assets/Day 6 Fill.jpg', '/assets/Day 6 Viewpoint.jpg'] },
 ];
 
 const Gallery = () => {
