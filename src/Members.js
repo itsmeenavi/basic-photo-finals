@@ -8,7 +8,7 @@ const members = [
   { name: 'Para, Andrea', image: '/assets/Andrea.jpg' },
   { name: 'Osiana, Raiza Mae S.', image: '/assets/Raiza.jpg' },
   { name: 'Quiming, John Carlo C.', image: '/assets/John.jpg' },
-  { name: 'Salazar, Ivhan Christopher M.', image: '/assets/Ivhan.jpg' },
+  { name: 'Salazar, Ivhan Christopher M.', image: '/assets/Ivhan Candid.jpg' },
   { name: 'Tiu, Jancris S.', image: '/assets/Jancris.jpg' }, // Add more mock names here
 ];
 

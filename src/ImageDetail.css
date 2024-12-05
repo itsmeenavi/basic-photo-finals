@@ -1,0 +1,38 @@
+/* ImageDetail.css */
+.image-detail-container {
+  background-color: #222831;
+  color: #EEEEEE;
+  min-height: calc(100vh - 80px); /* Adjust based on navbar height */
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.image-detail-container h2 {
+  color: #00ADB5;
+  margin-bottom: 1.5rem;
+}
+
+.detailed-image {
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  margin-bottom: 2rem;
+}
+
+.back-button {
+  text-decoration: none;
+  background-color: #00ADB5;
+  color: #222831;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #019ca3;
+}

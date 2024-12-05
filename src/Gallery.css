@@ -1,84 +1,70 @@
 /* Gallery.css */
+
 .gallery-container {
-    background-color: #222831; /* Set background color */
-    padding: 2rem;
-  }
-  
-  .gallery-card {
-    background-color: #393E46;
-    border-radius: 8px;
-    padding: 1rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    color: #EEEEEE;
-  }
-  
-  .gallery-card h2 {
-    color: #00ADB5;
-    text-align: center;
-    margin-bottom: 1rem;
-  }
-  
-  .gallery-images {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-    justify-items: center;
-  }
-  
-  .image-container {
-    position: relative;
-    overflow: hidden;
-    cursor: pointer;
-    width: 100%;
-    height: 300px; /* Fixed height for images */
-  }
-  
-  .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Makes images cover the area, keeping their aspect ratio */
-    border-radius: 8px;
-    transition: transform 0.3s ease;
-  }
-  
-  .image-container:hover img {
-    transform: scale(1.1); /* Zoom in effect on hover */
-  }
-  /* Modal background */
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 9999;
+  background-color: #222831; /* Set background color */
+  padding: 2rem;
 }
 
-/* Modal content - image container */
-.modal-content {
+.gallery-card {
+  background-color: #393E46;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  color: #EEEEEE;
+}
+
+.gallery-card h2 {
+  color: #00ADB5;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.gallery-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  justify-items: center;
+}
+
+.image-link {
+  text-decoration: none;
+  color: inherit; /* Inherit text color */
+}
+
+.image-container {
   position: relative;
-  max-width: 90%;
-  max-height: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden; /* Ensures image stays within bounds */
-}
-
-/* Image styling - flexible for both portrait and landscape */
-.modal-content img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain; /* Ensures the image scales without distorting */
-  border-radius: 10px;
-}
-
-/* Hover effect for the modal */
-.modal:hover {
+  overflow: hidden;
   cursor: pointer;
+  width: 100%;
+  height: 300px; /* Fixed height for images */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image-container img {
+  width: 100%;
+  height: 80%; /* Adjust to leave space for caption */
+  object-fit: cover; /* Makes images cover the area, keeping their aspect ratio */
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.1); /* Zoom in effect on hover */
+}
+
+.image-caption {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+  color: #EEEEEE;
+}
+
+.description {
+  margin-top: 8px; /* Space between caption and description */
+  font-size: 14px;
+  color: white;
+  line-height: 1.4;
 }
