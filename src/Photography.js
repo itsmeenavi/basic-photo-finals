@@ -37,13 +37,41 @@ const photographers = [
         '/assets/Ivhan/66.jpg',
     ],
   },
+
+  {
+    name: 'Oliver',
+    images: [
+     
+        '/assets/Oliver/1.jpg',
+        '/assets/Oliver/2.jpg',
+        '/assets/Oliver/3.jpg',
+        '/assets/Oliver/4.jpg',
+        '/assets/Oliver/5.jpg',
+        '/assets/Oliver/6.jpg',
+        '/assets/Oliver/7.jpg',
+     
+    ],
+  },
+
+  {
+    name: 'Raiza',
+    images: [
+     
+        '/assets/Raiza/1.jpg',
+        '/assets/Raiza/2.jpg',
+        '/assets/Raiza/3.jpg',
+        '/assets/Raiza/4.jpg',
+        '/assets/Raiza/5.jpg',
+        '/assets/Raiza/6.jpg',
+    ],
+  },
   // Add more photographers as needed
 ];
 
 function Photography() {
   return (
     <div className="photography-container">
-      <h1>5 Day Photography</h1>
+      <h1>6 Day Photography</h1>
       {photographers.map((photographer, index) => (
         <div key={index} className="photographer-section">
           <h2>{photographer.name}</h2>

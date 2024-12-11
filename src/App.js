@@ -18,7 +18,7 @@ function App() {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/members">Members</Link></li>
               <li><Link to="/gallery">Gallery</Link></li>
-              <li><Link to="/photography">5 Day Photography</Link></li> {/* Add link for Photography */}
+              <li><Link to="/photography">6 Day Photography</Link></li> {/* Add link for Photography */}
             </ul>
           </nav>
         </header>
