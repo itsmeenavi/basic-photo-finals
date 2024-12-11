@@ -1,5 +1,5 @@
 // Photography.js
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Photography.css';
 
 const photographers = [
@@ -23,52 +23,78 @@ const photographers = [
   {
     name: 'Ivhan',
     images: [
-        '/assets/Day 1 Color.jpg',
-        '/assets/Day 1 Thirds.jpg',
-        '/assets/Ivhan/5.jpg',
-        '/assets/Ivhan/55.jpg',
-        '/assets/Ivhan/2.jpg',
-        '/assets/Ivhan/22.jpg',
-        '/assets/Ivhan/3.jpg',
-        '/assets/Ivhan/33.jpg',
-        '/assets/Ivhan/4.jpg',
-        '/assets/Ivhan/44.jpg',
-        '/assets/Ivhan/6.jpg',
-        '/assets/Ivhan/66.jpg',
+      '/assets/Day 1 Color.jpg',
+      '/assets/Day 1 Thirds.jpg',
+      '/assets/Ivhan/5.jpg',
+      '/assets/Ivhan/55.jpg',
+      '/assets/Ivhan/2.jpg',
+      '/assets/Ivhan/22.jpg',
+      '/assets/Ivhan/3.jpg',
+      '/assets/Ivhan/33.jpg',
+      '/assets/Ivhan/4.jpg',
+      '/assets/Ivhan/44.jpg',
+      '/assets/Ivhan/6.jpg',
+      '/assets/Ivhan/66.jpg',
     ],
   },
-
   {
     name: 'Oliver',
     images: [
-     
-        '/assets/Oliver/1.jpg',
-        '/assets/Oliver/2.jpg',
-        '/assets/Oliver/3.jpg',
-        '/assets/Oliver/4.jpg',
-        '/assets/Oliver/5.jpg',
-        '/assets/Oliver/6.jpg',
-        '/assets/Oliver/7.jpg',
-     
+      '/assets/Oliver/1.jpg',
+      '/assets/Oliver/2.jpg',
+      '/assets/Oliver/3.jpg',
+      '/assets/Oliver/4.jpg',
+      '/assets/Oliver/5.jpg',
+      '/assets/Oliver/6.jpg',
+      '/assets/Oliver/7.jpg',
     ],
   },
-
   {
     name: 'Raiza',
     images: [
-     
-        '/assets/Raiza/1.jpg',
-        '/assets/Raiza/2.jpg',
-        '/assets/Raiza/3.jpg',
-        '/assets/Raiza/4.jpg',
-        '/assets/Raiza/5.jpg',
-        '/assets/Raiza/6.jpg',
+      '/assets/Raiza/1.jpg',
+      '/assets/Raiza/2.jpg',
+      '/assets/Raiza/3.jpg',
+      '/assets/Raiza/4.jpg',
+      '/assets/Raiza/5.jpg',
+      '/assets/Raiza/6.jpg',
     ],
   },
   // Add more photographers as needed
 ];
 
 function Photography() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedPhotographer, setSelectedPhotographer] = useState('');
+
+  const openModal = (image, photographerName) => {
+    setSelectedImage(image);
+    setSelectedPhotographer(photographerName);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSelectedImage(null);
+    setSelectedPhotographer('');
+  };
+
+  useEffect(() => {
+    if (isModalOpen) {
+      // Prevent background scrolling
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Re-enable background scrolling
+      document.body.style.overflow = 'auto';
+    }
+
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [isModalOpen]);
+
   return (
     <div className="photography-container">
       <h1>6 Day Photography</h1>
@@ -77,13 +103,27 @@ function Photography() {
           <h2>{photographer.name}</h2>
           <div className="collage">
             {photographer.images.map((image, imgIndex) => (
-              <div key={imgIndex} className={`collage-item item-${imgIndex % 6}`}>
+              <div
+                key={imgIndex}
+                className={`collage-item item-${imgIndex % 6}`}
+                onClick={() => openModal(image, photographer.name)}
+              >
                 <img src={image} alt={`${photographer.name} ${imgIndex + 1}`} />
               </div>
             ))}
           </div>
         </div>
       ))}
+
+      {isModalOpen && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <span className="close-button" onClick={closeModal}>&times;</span>
+            <img src={selectedImage} alt={selectedPhotographer} className="modal-image" />
+            {selectedPhotographer && <p className="photographer-name">{selectedPhotographer}</p>}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
