@@ -1,5 +1,6 @@
 // Photography.js
 import React, { useState, useEffect } from 'react';
+import LazyLoad from 'react-lazyload'; // <-- Import LazyLoad
 import './Photography.css';
 
 const photographers = [
@@ -108,7 +109,22 @@ function Photography() {
                 className={`collage-item item-${imgIndex % 6}`}
                 onClick={() => openModal(image, photographer.name)}
               >
-                <img src={image} alt={`${photographer.name} ${imgIndex + 1}`} />
+                <LazyLoad
+                  height={200} // Placeholder height; adjust as needed
+                  offset={100} // Start loading 100px before image is in viewport
+                  once // Load the image only once
+                  placeholder={
+                    <div className="image-placeholder">
+                      {/* You can add a spinner or a blurred version of the image here */}
+                      Loading...
+                    </div>
+                  }
+                >
+                  <img
+                    src={image}
+                    alt={`${photographer.name} ${imgIndex + 1}`}
+                  />
+                </LazyLoad>
               </div>
             ))}
           </div>
@@ -118,9 +134,29 @@ function Photography() {
       {isModalOpen && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <span className="close-button" onClick={closeModal}>&times;</span>
-            <img src={selectedImage} alt={selectedPhotographer} className="modal-image" />
-            {selectedPhotographer && <p className="photographer-name">{selectedPhotographer}</p>}
+            <span className="close-button" onClick={closeModal}>
+              &times;
+            </span>
+            <LazyLoad
+              height={400} // Adjust based on your design
+              offset={100}
+              once
+              placeholder={
+                <div className="image-placeholder">
+                  {/* Placeholder for modal image */}
+                  Loading...
+                </div>
+              }
+            >
+              <img
+                src={selectedImage}
+                alt={selectedPhotographer}
+                className="modal-image"
+              />
+            </LazyLoad>
+            {selectedPhotographer && (
+              <p className="photographer-name">{selectedPhotographer}</p>
+            )}
           </div>
         </div>
       )}
