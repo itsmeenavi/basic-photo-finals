@@ -4,53 +4,52 @@ import LazyLoad from 'react-lazyload';
 import './Compositions.css';
 
 const compositions = [
-    {
-      name: 'Rule of Thirds',
-      description: 'Aligning a subject with the guide lines and intersection points to create more balanced and interesting compositions.',
-      images: [
-        '/assets/Day 1 Color.jpg', 
-        '/assets/Day 1 Thirds.jpg', 
-        '/assets/Oliver/1.jpg'
-      ],
-    },
-    {
-      name: 'Frame Within Frame',
-      description: 'Using natural or architectural frames to focus attention on the subject and add depth.',
-      images: [
-        '/assets/Ivhan/2.jpg', 
-        '/assets/Raiza/3.jpg', 
-        '/assets/Oliver/3.jpg'
-      ],
-    },
-    {
-      name: 'Leading Lines',
-      description: 'Lines that lead the viewer’s eye to the subject, creating depth and interest.',
-      images: [
-        '/assets/Jancris/2.jpg', 
-        '/assets/Jancris/22.jpg', 
-        '/assets/Ivhan/3.jpg'
-      ],
-    },
-    {
-      name: 'Patterns and Repetition',
-      description: 'Highlighting repeated shapes or forms to create a visually appealing image.',
-      images: [
-        '/assets/Oliver/5.jpg', 
-        '/assets/Raiza/5.jpg', 
-        '/assets/Ivhan/5.jpg'
-      ],
-    },
-    {
-      name: 'Color Combination',
-      description: 'Using complementary or harmonious colors to enhance visual interest.',
-      images: [
-        '/assets/Jancris/44.jpg', 
-        '/assets/Ivhan/44.jpg', 
-        '/assets/Oliver/4.jpg'
-      ],
-    },
-  ];
-  
+  {
+    name: 'Rule of Thirds',
+
+    images: [
+      '/assets/Andrea/Rules_of_thirds_Andrea.jpg',
+      '/assets/Andrea/Rules_of_thirds_Andrea2.jpg',
+      '/assets/Andrea/Rules_of_thirds_Andrea3.jpg',
+    ],
+  },
+  {
+    name: 'Rule of Odds',
+
+    images: [
+      '/assets/Ivhan/2.jpg',
+      '/assets/compo/Odds.jpg',
+      '/assets/compo/Odds2.jpg',
+    ],
+  },
+  {
+    name: 'Fill the Frame',
+   
+    images: [
+      '/assets/compo/Fillframe1.jpg',
+      '/assets/compo/Fillframe2.jpg',
+      '/assets/Day 6 Fill.jpg',
+    ],
+  },
+  {
+    name: 'Frame within Frame',
+
+    images: [
+      '/assets/compo/Frame1.jpg',
+      '/assets/compo/Frame2.jpg',
+      '/assets/compo/Frame3.jpg',
+    ],
+  },
+  {
+    name: 'View Point',
+
+    images: [
+      '/assets/Day 6 Viewpoint.jpg',
+      '/assets/Ivhan/44.jpg',
+      '/assets/compo/View.jpg',
+    ],
+  },
+];
 
 function Compositions() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -71,14 +70,10 @@ function Compositions() {
 
   useEffect(() => {
     if (isModalOpen) {
-      // Prevent background scrolling
       document.body.style.overflow = 'hidden';
     } else {
-      // Re-enable background scrolling
       document.body.style.overflow = 'auto';
     }
-
-    // Cleanup on unmount
     return () => {
       document.body.style.overflow = 'auto';
     };
@@ -87,7 +82,9 @@ function Compositions() {
   return (
     <div className="compositions-container">
       <h1>Compositions</h1>
-      <p className="intro-text">Explore various composition techniques and how they can enhance the storytelling of your photographs.</p>
+      <p className="intro-text">
+       5 Compositions, 3 pictures each. 15 pictures in total.
+      </p>
       {compositions.map((comp, index) => (
         <div key={index} className="composition-section">
           <h2>{comp.name}</h2>
@@ -103,9 +100,7 @@ function Compositions() {
                   height={200}
                   offset={100}
                   once
-                  placeholder={
-                    <div className="image-placeholder">Loading...</div>
-                  }
+                  placeholder={<div className="image-placeholder">Loading...</div>}
                 >
                   <img
                     src={image}
@@ -125,15 +120,12 @@ function Compositions() {
             <span className="close-button" onClick={closeModal}>
               &times;
             </span>
+            <h2 className="modal-title">{selectedComposition}</h2>
             <LazyLoad
               height={400}
               offset={100}
               once
-              placeholder={
-                <div className="image-placeholder">
-                  Loading...
-                </div>
-              }
+              placeholder={<div className="image-placeholder">Loading...</div>}
             >
               <img
                 src={selectedImage}
@@ -141,9 +133,6 @@ function Compositions() {
                 className="modal-image"
               />
             </LazyLoad>
-            {selectedComposition && (
-              <p className="composition-name">{selectedComposition}</p>
-            )}
           </div>
         </div>
       )}

@@ -52,7 +52,7 @@ const photographers = [
     ],
   },
   {
-    name: 'Raiza',
+    name: 'Raiza Osiana',
     images: [
       '/assets/Raiza/1.jpg',
       '/assets/Raiza/2.jpg',
@@ -60,6 +60,38 @@ const photographers = [
       '/assets/Raiza/4.jpg',
       '/assets/Raiza/5.jpg',
       '/assets/Raiza/6.jpg',
+    ],
+  },
+  {
+    name: 'Andrea Para',
+    images: [
+      '/assets/Andrea/1.jpg',
+      '/assets/Andrea/2.jpg',
+      '/assets/Andrea/3.jpg',
+      '/assets/Andrea/4.jpg',
+      '/assets/Andrea/5.jpg',
+      '/assets/Andrea/6.jpg',
+      '/assets/Andrea/7.jpg',
+      '/assets/Andrea/8.jpg',
+      '/assets/Andrea/9.jpg',
+      '/assets/Andrea/10.jpg',
+      '/assets/Andrea/11.jpg',
+      '/assets/Andrea/12.jpg',
+      '/assets/Andrea/13.jpg',
+      '/assets/Andrea/14.jpg',
+    ],
+  },
+  {
+    name: 'Kurt Bensurto',
+    images: [
+      '/assets/Kurt/1.jpg',
+      '/assets/Kurt/2.jpg',
+      '/assets/Kurt/3.jpg',
+      '/assets/Kurt/4.jpg',
+      '/assets/compo/Frame1.jpg',
+      '/assets/compo/Frame2.jpg',
+      '/assets/compo/Frame3.jpg',
+     
     ],
   },
   // Add more photographers as needed

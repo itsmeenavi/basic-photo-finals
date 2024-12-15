@@ -5,23 +5,38 @@
 
 .navbar {
   background-color: #393E46; /* Dark background for the navbar */
-  padding: 1rem 2rem;
+  padding: 0.5rem 1rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Optional shadow for depth */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.navbar nav ul {
+.navbar nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #EEEEEE;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
   list-style-type: none;
+  display: flex;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
 }
 
-.navbar nav ul li {
+.nav-links li {
   margin: 0 1rem; /* Space out the navbar items */
 }
 
-.navbar nav ul li a {
+.nav-links li a {
   text-decoration: none;
   color: #EEEEEE; /* Light text for the links */
   font-size: 1.2rem;
@@ -29,15 +44,65 @@
   transition: color 0.3s ease; /* Smooth color transition */
 }
 
-.navbar nav ul li a:hover {
+.nav-links li a:hover {
   color: #00ADB5; /* Highlight link on hover */
 }
 
-/* Active link styling if using NavLink */
-.active {
-  color: #00ADB5;
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
 }
 
-/* Gallery.css remains unchanged */
-/* Members.css contains its own styles */
-/* Home.css now contains only image styles */
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #EEEEEE;
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+/* Fade out the second bar */
+.change:nth-child(2) {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    position: fixed;
+    right: 0;
+    height: 100vh;
+    top: 0;
+    background-color: #393E46;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    padding-top: 4rem;
+  }
+
+  .nav-links.mobile {
+    transform: translateX(0);
+  }
+
+  .nav-links li {
+    margin: 2rem 0;
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger on small screens */
+  }
+}

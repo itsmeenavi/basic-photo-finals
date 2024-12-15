@@ -19,13 +19,9 @@ const Gallery = () => {
               >
                 <div className="image-container">
                   <img src={image.src} alt={image.caption} />
-                  <p className="image-caption">{image.caption}</p> {/* Caption below the image */}
-                 
                 </div>
-                <div >
-                 
+                <p className="image-caption">{image.caption}</p>
                 <p className="description">{image.description}</p>
-                 </div>
               </Link>
             ))}
           </div>

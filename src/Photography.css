@@ -1,4 +1,15 @@
-/* Photography.css */
+/* Global Box Sizing and Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
 
 /* Full-Screen Background */
 .photography-background {
@@ -52,12 +63,12 @@
 /* Masonry Collage Layout */
 .collage {
   display: flex;
-  margin-left: -15px; /* gutter size offset */
+  margin-left: -15px; /* Gutter size offset */
   width: auto;
 }
 
 .collage-column {
-  padding-left: 15px; /* gutter size */
+  padding-left: 15px; /* Gutter size */
   background-clip: padding-box;
 }
 
@@ -172,11 +183,11 @@
 /* Responsive Design Enhancements */
 @media (max-width: 768px) {
   .photography-background {
-    padding: 1rem;
+    padding: 0; /* Ensure no extra padding */
   }
 
   .photography-container {
-    padding: 1rem;
+    padding: 1rem; /* Equal padding on all sides */
   }
 
   .collage {
@@ -194,5 +205,6 @@
   .photography-image,
   .image-placeholder {
     height: auto; /* Allow images to maintain their aspect ratios */
+    max-width: 100%;
   }
 }

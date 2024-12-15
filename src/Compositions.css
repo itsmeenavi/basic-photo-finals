@@ -1,17 +1,15 @@
-/* Compositions.css */
-
 .compositions-container {
-    background-color: #222831; /* Matching Gallery's background color */
+    background-color: #222831;
     padding: 2rem;
     min-height: 100vh;
-    color: #EEEEEE; /* Light text color */
+    color: #EEEEEE;
   }
   
   .compositions-container h1 {
     text-align: center;
     margin-bottom: 20px;
     font-size: 2.5em;
-    color: #00ADB5; /* Vibrant heading color */
+    color: #00ADB5;
   }
   
   .intro-text {
@@ -19,10 +17,14 @@
     font-size: 1.2em;
     color: #EEEEEE;
     margin-bottom: 50px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5em;
   }
   
   .composition-section {
-    background-color: #393E46; /* Matching Gallery's card background */
+    background-color: #393E46;
     border-radius: 8px;
     padding: 1.5rem;
     margin-bottom: 2rem;
@@ -36,7 +38,7 @@
   }
   
   .composition-section h2 {
-    color: #00ADB5; /* Vibrant heading color */
+    color: #00ADB5;
     margin-bottom: 10px;
     font-size: 1.8em;
   }
@@ -68,7 +70,7 @@
   
   .composition-image {
     width: 100%;
-    height: 200px; /* Fixed height for consistency */
+    height: 200px;
     object-fit: cover;
     border-radius: 8px;
     transition: transform 0.3s ease;
@@ -77,7 +79,7 @@
   .image-placeholder {
     width: 100%;
     height: 200px;
-    background-color: #444B52; /* Placeholder background color */
+    background-color: #444B52;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,7 +105,7 @@
     position: relative;
     max-width: 90%;
     max-height: 90%;
-    background-color: #393E46; /* Matching card background */
+    background-color: #393E46;
     padding: 20px;
     border-radius: 8px;
     overflow: auto;
@@ -117,7 +119,7 @@
     right: 15px;
     font-size: 2rem;
     font-weight: bold;
-    color: #00ADB5; /* Vibrant close button */
+    color: #00ADB5;
     cursor: pointer;
     transition: color 0.3s ease;
   }
@@ -126,19 +128,20 @@
     color: #EEEEEE;
   }
   
+  .modal-title {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #00ADB5;
+  }
+  
   .modal-image {
     width: 100%;
     height: auto;
     display: block;
     margin: 0 auto;
     border-radius: 8px;
-  }
-  
-  .composition-name {
-    text-align: center;
-    margin-top: 10px;
-    font-size: 1.2em;
-    color: #00ADB5; /* Vibrant text color */
   }
   
   /* Animations */

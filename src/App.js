@@ -1,5 +1,5 @@
 // App.js
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './Home';
@@ -10,18 +10,37 @@ import ImageDetail from './ImageDetail';
 import Compositions from './Compositions'; // <-- Import the new Compositions component
 
 function App() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   return (
     <Router>
       <div className="App">
         <header className="navbar">
           <nav>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/members">Members</Link></li>
-              <li><Link to="/gallery">Gallery</Link></li>
-              <li><Link to="/photography">6 Day Photography</Link></li>
-              <li><Link to="/compositions">Compositions</Link></li> {/* New Tab */}
+            <div className="logo">
+              {/* You can place your logo here */}
+              <Link to="/" onClick={closeMobileMenu}>One Shot</Link>
+            </div>
+            <ul className={isMobileMenuOpen ? "nav-links mobile" : "nav-links"}>
+              <li><Link to="/" onClick={closeMobileMenu}>Home</Link></li>
+              <li><Link to="/members" onClick={closeMobileMenu}>Members</Link></li>
+              <li><Link to="/gallery" onClick={closeMobileMenu}>Gallery</Link></li>
+              <li><Link to="/photography" onClick={closeMobileMenu}>6 Day Photography</Link></li>
+              <li><Link to="/compositions" onClick={closeMobileMenu}>Compositions</Link></li> {/* New Tab */}
             </ul>
+            <div className="hamburger" onClick={handleToggle}>
+              <div className={isMobileMenuOpen ? "bar change" : "bar"}></div>
+              <div className={isMobileMenuOpen ? "bar change" : "bar"}></div>
+              <div className={isMobileMenuOpen ? "bar change" : "bar"}></div>
+            </div>
           </nav>
         </header>
         <main>

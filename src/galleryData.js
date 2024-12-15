@@ -6,13 +6,13 @@ const galleryData = [
       images: [
         { 
           src: '/assets/Day 1 Color.jpg', 
-          caption: 'Color Combination',
-          description: 'Exploring the harmonious blend of colors to create visually appealing images.'
+          caption: 'Rule of Thirds',
+          description: 'Applying the rule of thirds to achieve balanced and engaging compositions.'
         },
         { 
           src: '/assets/Day 1 Thirds.jpg', 
-          caption: 'Rule of Thirds',
-          description: 'Applying the rule of thirds to achieve balanced and engaging compositions.'
+          caption: 'Color Combination',
+          description: 'Exploring the harmonious blend of colors to create visually appealing images.'
         },
       ],
     },
@@ -21,12 +21,12 @@ const galleryData = [
       images: [
         { 
           src: '/assets/Day 2 Odds.jpg', 
-          caption: 'Playing with Odds',
+          caption: 'Rule of Odds',
           description: 'Using odd numbers of subjects to add interest and dynamism to your photos.'
         },
         { 
           src: '/assets/Day 2 Frame.jpg', 
-          caption: 'Creative Framing',
+          caption: 'Frame within Frame',
           description: 'Incorporating natural frames to focus attention on the main subject.'
         },
       ],
@@ -41,7 +41,7 @@ const galleryData = [
         },
         { 
           src: '/assets/Day 3 Pattern.jpg', 
-          caption: 'Capturing Patterns',
+          caption: 'Patterns',
           description: 'Identifying and photographing repeating patterns to create visually stimulating images.'
         },
       ],
@@ -51,13 +51,13 @@ const galleryData = [
       images: [
         { 
           src: '/assets/Day 4.jpg', 
-          caption: 'Day 4 Overview',
+          caption: 'View Point',
           description: 'A comprehensive overview of Day 4\'s photography techniques and exercises.'
         },
         { 
-          src: '/assets/Day 4 Direct.jpg', 
-          caption: 'Direct Approach',
-          description: 'Taking a straightforward approach to highlight the main subject without distractions.'
+          src: '/assets/ColorCombi.jpg', 
+          caption: 'Color Combination',
+          description: 'A contrast of colors make awesome combinations'
         },
       ],
     },
@@ -66,12 +66,12 @@ const galleryData = [
       images: [
         { 
           src: '/assets/Day 5 Pasko.jpg', 
-          caption: 'Festive Lights',
+          caption: 'Color Combination',
           description: 'Capturing the vibrant and colorful lights during festive seasons.'
         },
         { 
           src: '/assets/Day 5 Symmetry.jpg', 
-          caption: 'Symmetrical Beauty',
+          caption: 'Symmetrical',
           description: 'Utilizing symmetry to create harmonious and balanced photographs.'
         },
       ],
@@ -81,12 +81,12 @@ const galleryData = [
       images: [
         { 
           src: '/assets/Day 6 Fill.jpg', 
-          caption: 'Filling the Frame',
+          caption: 'Fill the Frame',
           description: 'Maximizing the use of space within the frame to emphasize your subject.'
         },
         { 
           src: '/assets/Day 6 Viewpoint.jpg', 
-          caption: 'Unique Viewpoint',
+          caption: 'Viewpoint',
           description: 'Experimenting with different angles to provide a fresh perspective.'
         },
       ],

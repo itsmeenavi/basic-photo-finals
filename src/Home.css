@@ -1,35 +1,131 @@
 /* Home.css */
 .home-container {
-  text-align: center; /* Center the content horizontally */
-  background-color: #222831; /* Match the overall theme */
+  text-align: center;
+  background-color: #222831;
   color: #EEEEEE;
   font-family: 'Poppins', sans-serif;
-  padding: 2rem 1rem; /* Add padding for better spacing */
-  box-sizing: border-box; /* Include padding in the element's total width and height */
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+.home-container h1 {
+  margin-bottom: 2rem;
+}
+
+.image-wrapper {
+  margin-bottom: 2rem;
 }
 
 .home-image {
-  max-width: 80%; /* Limit the image width to 80% of its container */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Rounded corners for aesthetics */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-  margin: 0 auto; /* Center the image horizontally */
-  display: block; /* Make margin auto work */
+  max-width: 80%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Thumbnail Styles */
+.thumbnail-wrapper {
+  display: inline-block;
+  cursor: pointer;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.thumbnail-image {
+  max-width: 450px; /* Increased from 150px to 250px */
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.thumbnail-wrapper:hover .thumbnail-image {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+}
+
+.thumbnail-text {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #CCCCCC;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #222831;
+  padding: 1rem;
+  border-radius: 10px;
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+  box-sizing: border-box;
+}
+
+.modal-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+
+.close-button {
+  background: #393E46;
+  border: none;
+  color: #EEEEEE;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.close-button:hover {
+  background: #00ADB5;
 }
 
 /* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .thumbnail-image {
+    max-width: 200px; /* Adjusted for medium screens */
+  }
+}
+
 @media (max-width: 768px) {
   .home-image {
-    max-width: 95%; /* Increase width on smaller screens */
+    max-width: 95%;
+  }
+  
+  .thumbnail-image {
+    max-width: 180px; /* Adjusted for tablets */
   }
 }
 
 @media (max-width: 480px) {
   .home-container {
-    padding: 1rem; /* Reduce padding on very small screens */
+    padding: 1rem;
   }
   
   .home-image {
-    max-width: 100%; /* Full width on mobile devices */
+    max-width: 100%;
+  }
+  
+  .thumbnail-image {
+    max-width: 150px; /* Maintain larger size but make it fit on small screens */
   }
 }
