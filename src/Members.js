@@ -7,8 +7,8 @@ const members = [
     name: 'Bensurto, Kurt Benjiemel R.',
     images: [
       '/assets/Bensurto Candid.jpg',
-      '/assets/Kurt/Kurt2.jpg',
-      '/assets/Kurt/Kurt3.jpg',
+      '/assets/Kurt/kurt2.jpg',
+      '/assets/Kurt/kurt3.jpg',
     ],
   },
   {

@@ -29,7 +29,7 @@ function Home() {
       {/* Group image thumbnail (clickable) */}
       <div className="thumbnail-wrapper" onClick={openModal}>
         <img 
-          src="/assets/group.jpg" 
+          src="/assets/Group.jpg" 
           alt="Group" 
           className="thumbnail-image" 
         />

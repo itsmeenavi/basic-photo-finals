@@ -35,7 +35,7 @@ const galleryData = [
       day: 3,
       images: [
         { 
-          src: '/assets/Day 3 Fill The Frame.jpg', 
+          src: '/assets/Day 3 Fill The frame.jpg', 
           caption: 'Fill the Frame',
           description: 'Eliminating empty spaces by getting closer to your subject for a more impactful image.'
         },
@@ -65,7 +65,7 @@ const galleryData = [
       day: 5,
       images: [
         { 
-          src: '/assets/Day 5 Pasko.jpg', 
+          src: '/assets/Day 5 pasko.jpg', 
           caption: 'Color Combination',
           description: 'Capturing the vibrant and colorful lights during festive seasons.'
         },
