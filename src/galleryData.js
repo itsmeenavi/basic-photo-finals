@@ -35,7 +35,7 @@ const galleryData = [
       day: 3,
       images: [
         { 
-          src: '/assets/Day 3 Fill The frame.jpg', 
+          src: '/assets/Day 3 Fill the frame.jpg', 
           caption: 'Fill the Frame',
           description: 'Eliminating empty spaces by getting closer to your subject for a more impactful image.'
         },

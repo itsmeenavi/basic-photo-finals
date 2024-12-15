@@ -47,7 +47,7 @@ const members = [
     name: 'Salazar, Ivhan Christopher',
     images: [
       '/assets/Ivhan.jpg',
-      '/assets/Ivhan/Ivhan.jpg',
+      '/assets/Ivhan/Ivhan.JPG',
       '/assets/Ivhan/Ivhan6.jpg',
     ],
   },
