@@ -41,7 +41,7 @@ function Home() {
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <img 
-              src="/assets/group.jpg" 
+              src="/assets/Group.jpg" 
               alt="Group Large" 
               className="modal-image" 
             />
