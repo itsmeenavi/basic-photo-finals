@@ -1,6 +1,7 @@
 // Photography.js
 import React, { useState, useEffect } from 'react';
-import LazyLoad from 'react-lazyload'; // <-- Import LazyLoad
+import LazyLoad from 'react-lazyload';
+import Masonry from 'react-masonry-css'; // Import Masonry
 import './Photography.css';
 
 const photographers = [
@@ -96,70 +97,83 @@ function Photography() {
     };
   }, [isModalOpen]);
 
-  return (
-    <div className="photography-container">
-      <h1>6 Day Photography</h1>
-      {photographers.map((photographer, index) => (
-        <div key={index} className="photographer-section">
-          <h2>{photographer.name}</h2>
-          <div className="collage">
-            {photographer.images.map((image, imgIndex) => (
-              <div
-                key={imgIndex}
-                className={`collage-item item-${imgIndex % 6}`}
-                onClick={() => openModal(image, photographer.name)}
-              >
-                <LazyLoad
-                  height={200} // Placeholder height; adjust as needed
-                  offset={100} // Start loading 100px before image is in viewport
-                  once // Load the image only once
-                  placeholder={
-                    <div className="image-placeholder">
-                      {/* You can add a spinner or a blurred version of the image here */}
-                      Loading...
-                    </div>
-                  }
-                >
-                  <img
-                    src={image}
-                    alt={`${photographer.name} ${imgIndex + 1}`}
-                  />
-                </LazyLoad>
-              </div>
-            ))}
-          </div>
-        </div>
-      ))}
+  // Define Masonry breakpoints
+  const breakpointColumnsObj = {
+    default: 4,
+    1100: 3,
+    700: 2,
+    500: 1
+  };
 
-      {isModalOpen && (
-        <div className="modal-overlay" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <span className="close-button" onClick={closeModal}>
-              &times;
-            </span>
-            <LazyLoad
-              height={400} // Adjust based on your design
-              offset={100}
-              once
-              placeholder={
-                <div className="image-placeholder">
-                  {/* Placeholder for modal image */}
-                  Loading...
-                </div>
-              }
+  return (
+    <div className="photography-background">
+      <div className="photography-container">
+        <h1>6 Day Photography</h1>
+        {photographers.map((photographer, index) => (
+          <div key={index} className="photographer-section">
+            <h2>{photographer.name}</h2>
+            <Masonry
+              breakpointCols={breakpointColumnsObj}
+              className="collage"
+              columnClassName="collage-column"
             >
-              <img
-                src={selectedImage}
-                alt={selectedPhotographer}
-                className="modal-image"
-              />
-            </LazyLoad>
-            {selectedPhotographer && (
-              <p className="photographer-name">{selectedPhotographer}</p>
-            )}
+              {photographer.images.map((image, imgIndex) => (
+                <div
+                  key={imgIndex}
+                  className="collage-item"
+                  onClick={() => openModal(image, photographer.name)}
+                >
+                  <LazyLoad
+                    height={200} // Placeholder height; adjust as needed
+                    offset={100} // Start loading 100px before image is in viewport
+                    once // Load the image only once
+                    placeholder={
+                      <div className="image-placeholder">
+                        Loading...
+                      </div>
+                    }
+                  >
+                    <img
+                      src={image}
+                      alt={`${photographer.name} ${imgIndex + 1}`}
+                      className="photography-image"
+                    />
+                  </LazyLoad>
+                </div>
+              ))}
+            </Masonry>
           </div>
-        </div>
-      )}
+        ))}
+
+        {isModalOpen && (
+          <div className="modal-overlay" onClick={closeModal}>
+            <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+              <span className="close-button" onClick={closeModal}>
+                &times;
+              </span>
+              <LazyLoad
+                height={400} // Adjust based on your design
+                offset={100}
+                once
+                placeholder={
+                  <div className="image-placeholder">
+                    Loading...
+                  </div>
+                }
+              >
+                <img
+                  src={selectedImage}
+                  alt={selectedPhotographer}
+                  className="modal-image"
+                />
+              </LazyLoad>
+              {selectedPhotographer && (
+                <p className="photographer-name">{selectedPhotographer}</p>
+              )}
+            </div>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

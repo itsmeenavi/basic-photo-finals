@@ -3,10 +3,11 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './Home';
-import Members from './Members'; // Import the Members component
+import Members from './Members';
 import Gallery from './Gallery';
-import Photography from './Photography'; // Import the Photography component
-import ImageDetail from './ImageDetail'; // Import the ImageDetail component
+import Photography from './Photography';
+import ImageDetail from './ImageDetail';
+import Compositions from './Compositions'; // <-- Import the new Compositions component
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
               <li><Link to="/">Home</Link></li>
               <li><Link to="/members">Members</Link></li>
               <li><Link to="/gallery">Gallery</Link></li>
-              <li><Link to="/photography">6 Day Photography</Link></li> {/* Add link for Photography */}
+              <li><Link to="/photography">6 Day Photography</Link></li>
+              <li><Link to="/compositions">Compositions</Link></li> {/* New Tab */}
             </ul>
           </nav>
         </header>
@@ -27,7 +29,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/members" element={<Members />} />
             <Route path="/gallery" element={<Gallery />} />
-            <Route path="/photography" element={<Photography />} /> {/* Add Photography route */}
+            <Route path="/photography" element={<Photography />} />
+            <Route path="/compositions" element={<Compositions />} /> {/* New Route */}
             <Route path="/gallery/:day/:imageIndex" element={<ImageDetail />} />
           </Routes>
         </main>
