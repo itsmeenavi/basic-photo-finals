@@ -1,0 +1,26 @@
+/* Footer.css */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #222831; /* Matches your site's theme */
+    color: #EEEEEE; /* Light text color for readability */
+    text-align: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Ensures the footer stays on top */
+  }
+  
+  .footer-text {
+    margin: 0;
+    font-size: 0.9em;
+    color: #00ADB5; /* Vibrant accent color */
+  }
+  
+  @media (max-width: 768px) {
+    .footer-text {
+      font-size: 0.8em;
+    }
+  }
+  

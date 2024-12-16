@@ -8,6 +8,7 @@ import Gallery from './Gallery';
 import Photography from './Photography';
 import ImageDetail from './ImageDetail';
 import Compositions from './Compositions'; // <-- Import the new Compositions component
+import Footer from './Footer'; // <-- Import the Footer component
 
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -53,6 +54,7 @@ function App() {
             <Route path="/gallery/:day/:imageIndex" element={<ImageDetail />} />
           </Routes>
         </main>
+        <Footer /> {/* Include the Footer component here */}
       </div>
     </Router>
   );

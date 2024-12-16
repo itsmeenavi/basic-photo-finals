@@ -1,4 +1,5 @@
 /* Home.css */
+
 .home-container {
   text-align: center;
   background-color: #222831;
@@ -6,6 +7,10 @@
   font-family: 'Poppins', sans-serif;
   padding: 2rem 1rem;
   box-sizing: border-box;
+  min-height: calc(100vh - 60px); /* Ensures the container fills the viewport minus footer */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .home-container h1 {
@@ -34,7 +39,7 @@
 }
 
 .thumbnail-image {
-  max-width: 450px; /* Increased from 150px to 250px */
+  max-width: 450px; /* Increased from 150px to 450px as per original */
   height: auto;
   border-radius: 5px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.5);

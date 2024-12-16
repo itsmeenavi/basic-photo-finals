@@ -6,7 +6,7 @@ import './Photography.css';
 
 const photographers = [
   {
-    name: 'Jancris',
+    name: 'Jancris Tiu',
     images: [
       '/assets/Jancris/Jancris 1.jpg',
       '/assets/Jancris/Jancris 11.jpg',
@@ -23,7 +23,7 @@ const photographers = [
     ],
   },
   {
-    name: 'Ivhan',
+    name: 'Ivhan Salazar',
     images: [
       '/assets/Day 1 Color.jpg',
       '/assets/Day 1 Thirds.jpg',
@@ -40,7 +40,7 @@ const photographers = [
     ],
   },
   {
-    name: 'Oliver',
+    name: 'Oliver Dela Cruz',
     images: [
       '/assets/Oliver/1.jpg',
       '/assets/Oliver/2.jpg',
