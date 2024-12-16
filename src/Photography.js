@@ -68,7 +68,6 @@ const photographers = [
       '/assets/Andrea/1.jpg',
       '/assets/Andrea/2.jpg',
       '/assets/Andrea/3.jpg',
-      '/assets/Andrea/4.jpg',
       '/assets/Andrea/5.jpg',
       '/assets/Andrea/6.jpg',
       '/assets/Andrea/7.jpg',
